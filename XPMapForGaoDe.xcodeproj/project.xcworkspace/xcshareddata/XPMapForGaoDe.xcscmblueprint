@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "444E8416D52D88D24A18D6DFFED722EDA43AB44E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "444E8416D52D88D24A18D6DFFED722EDA43AB44E" : 9223372036854775807,
+    "8072F66DAF74305BE2598D6951044D2291E50A63" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CAC9B993-7389-4F13-9809-0EF4A29B0928",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "444E8416D52D88D24A18D6DFFED722EDA43AB44E" : "MapNavDemoForGaode\/",
+    "8072F66DAF74305BE2598D6951044D2291E50A63" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "XPMapForGaoDe",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "XPMapForGaoDe.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xploading\/MapNavDemoForGaode.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "444E8416D52D88D24A18D6DFFED722EDA43AB44E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xploading\/XPSeeChina.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8072F66DAF74305BE2598D6951044D2291E50A63"
+    }
+  ]
+}
