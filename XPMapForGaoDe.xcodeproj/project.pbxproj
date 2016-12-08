@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0916DE1DF981FB00112A59 /* WalkNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0916DD1DF981FB00112A59 /* WalkNaviViewController.swift */; };
 		BC4CA3971DF90810005911D3 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3961DF90810005911D3 /* NavViewController.swift */; };
 		BC4F7EB41DF83296009062EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7EB31DF83296009062EA /* AppDelegate.swift */; };
 		BC4F7EBB1DF83296009062EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4F7EBA1DF83296009062EA /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC0916DD1DF981FB00112A59 /* WalkNaviViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkNaviViewController.swift; sourceTree = "<group>"; };
 		BC4CA3961DF90810005911D3 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		BC4F7EB01DF83296009062EA /* XPMapForGaoDe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPMapForGaoDe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4F7EB31DF83296009062EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				BC4F7EE81DF8351F009062EA /* MapViewController.swift */,
 				BC4F7EE91DF8351F009062EA /* MapViewController.xib */,
 				BC4CA3961DF90810005911D3 /* NavViewController.swift */,
+				BC0916DD1DF981FB00112A59 /* WalkNaviViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				BC4F7EEA1DF8351F009062EA /* MapViewController.swift in Sources */,
 				BC4CA3971DF90810005911D3 /* NavViewController.swift in Sources */,
 				BC4F7EB41DF83296009062EA /* AppDelegate.swift in Sources */,
+				BC0916DE1DF981FB00112A59 /* WalkNaviViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

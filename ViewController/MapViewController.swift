@@ -15,17 +15,35 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var endField: UITextField!
     @IBOutlet weak var selectorTrip: UISegmentedControl!
+    
+    var isDrive = true
+    
+    
+    
+    
+    
+    
     //开始导航
     @IBAction func startNav(_ sender: UIButton) {
         self.startField.resignFirstResponder()
         self.endField.resignFirstResponder()
-        let DriverView = NavViewController()
-        DriverView.startPoint = AMapNaviPoint.location(withLatitude: (self.startPoint?.location.latitude)!, longitude: (self.startPoint?.location.longitude)!)
-//        print(self.endPoint?.building as Any)
-//        print(self.startPoint?.building as Any)
-        DriverView.endPoint = AMapNaviPoint.location(withLatitude: (self.endPoint?.location.latitude)!, longitude: (self.endPoint?.location.longitude)!)
-        self.navigationController?.pushViewController(DriverView, animated: true)
+        //判断startPoint和endPoint有值,并且请求完成后的地理编码和输入的地址一致时,开始导航
         
+        if (startPoint != nil && startPoint?.district == self.startField.text)&&(endPoint != nil && endPoint?.district == self.endField.text){
+        //选择出行方式
+            if isDrive{
+                //驾车
+                let DriverView = NavViewController()
+                DriverView.startPoint = AMapNaviPoint.location(withLatitude: (self.startPoint?.location.latitude)!, longitude: (self.startPoint?.location.longitude)!)
+                DriverView.endPoint = AMapNaviPoint.location(withLatitude: (self.endPoint?.location.latitude)!, longitude: (self.endPoint?.location.longitude)!)
+                self.navigationController?.pushViewController(DriverView, animated: true)
+            }else{
+                let walkView = WalkNaviViewController()
+                walkView.startPoint = AMapNaviPoint.location(withLatitude: (self.startPoint?.location.latitude)!, longitude: (self.startPoint?.location.longitude)!)
+                walkView.endPoint = AMapNaviPoint.location(withLatitude: (self.endPoint?.location.latitude)!, longitude: (self.endPoint?.location.longitude)!)
+                self.navigationController?.pushViewController(walkView, animated: true)
+            }
+        }
 
     }
     
@@ -47,8 +65,17 @@ class MapViewController: UIViewController {
         self.view.backgroundColor = UIColor.lightGray
         self.startField.text = "北京"
         self.endField.text = "首都机场"
-
+        self.selectorTrip.addTarget(self, action: #selector(segmentAction), for: .valueChanged)
         self.createMapToMapView()
+    }
+    //segment发生改变时
+    func segmentAction(segment:UISegmentedControl){
+        switch segment.selectedSegmentIndex {
+        case 0:
+            isDrive = true
+        default:
+            isDrive = false
+        }
     }
     //初始化
     func createMapToMapView(){
@@ -68,12 +95,6 @@ class MapViewController: UIViewController {
         self.searchApi?.delegate = self
         
     }
-    
-
-    
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -117,26 +138,20 @@ extension MapViewController:AMapSearchDelegate{
             annotation.title = code.formattedAddress
             if request.address == self.startField.text{
                 //设置大头针
-                
                 if self.startAnnotation != nil{
                     self.map?.removeAnnotation(self.startAnnotation)
                 }
-                
                 self.startPoint = code
                 self.startAnnotation = annotation
-                
-
             }else{
-
                 if self.endAnnotation != nil{
                     self.map?.removeAnnotation(self.endAnnotation)
                 }
                 self.endPoint = code
                 self.endAnnotation = annotation
-                
             }
+            code.district = request.address
             self.map?.addAnnotation(annotation)
-
         }
         
     }
