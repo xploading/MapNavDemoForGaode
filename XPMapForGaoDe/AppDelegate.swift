@@ -22,15 +22,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.frame = UIScreen.main.bounds
         window?.backgroundColor = UIColor.white
-        let vc = MapViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        window?.rootViewController = nav
+        window?.rootViewController = createTabBarController()
         window?.makeKeyAndVisible()
         
         
         
         return true
     }
+    
+    //创建标签栏
+    func createTabBarController() -> UITabBarController {
+        let tabController = UITabBarController()
+        let mapVC = MapViewController()
+        mapVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        let mapNav = UINavigationController(rootViewController: mapVC)
+        let locationVC = LocationViewController()
+        locationVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
+        let locationNav = UINavigationController(rootViewController: locationVC)
+        let districtVC = DistrictViewController()
+        districtVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 3)
+        let districtNav = UINavigationController(rootViewController: districtVC)
+        tabController.viewControllers = [mapNav,locationNav,districtNav]
+        return tabController
+    }
+    
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

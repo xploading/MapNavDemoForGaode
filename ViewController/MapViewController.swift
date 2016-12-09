@@ -64,7 +64,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
         self.startField.text = "北京"
-        self.endField.text = "首都机场"
+        self.endField.text = "威海日光浴场"
         self.selectorTrip.addTarget(self, action: #selector(segmentAction), for: .valueChanged)
         self.createMapToMapView()
     }
@@ -133,6 +133,8 @@ extension MapViewController:AMapSearchDelegate{
     //地理编码完成后执行的方法
     func onGeocodeSearchDone(_ request: AMapGeocodeSearchRequest!, response: AMapGeocodeSearchResponse!) {
         for code in response.geocodes{
+            print(code.location.latitude)
+            print(code.location.longitude)
             let annotation = MAPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(code.location.latitude), longitude: CLLocationDegrees(code.location.longitude))
             annotation.title = code.formattedAddress

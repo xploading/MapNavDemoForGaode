@@ -15,6 +15,7 @@ class LocationViewController: UIViewController ,AMapLocationManagerDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.frame = CGRect(x: 0, y: 64, width: Tools.ScreenW, height: Tools.ScreenH-44-64)
         self.locationService()
         
     }
@@ -31,13 +32,12 @@ class LocationViewController: UIViewController ,AMapLocationManagerDelegate{
             print(code?.formattedAddress as Any)
         })
         self.manager?.locatingWithReGeocode = true
-        self.manager?.startUpdatingLocation()
+//        self.manager?.startUpdatingLocation()
 
     }
     
     
     func amapLocationManager(_ manager: AMapLocationManager!, didUpdate location: CLLocation!, reGeocode: AMapLocationReGeocode!) {
-//        print(location.coordinate.latitude,location.coordinate.longitude)
         let annocation = MAPointAnnotation()
         annocation.coordinate = location.coordinate
         if self.myPoint != nil{
@@ -54,15 +54,4 @@ class LocationViewController: UIViewController ,AMapLocationManagerDelegate{
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
