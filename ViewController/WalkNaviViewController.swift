@@ -30,6 +30,9 @@ class WalkNaviViewController: UIViewController {
     }
     
     //通过起点和终点规划路径
+    
+    
+    
     func calculateRoute(){
         let w = UIScreen.main.bounds.width
         let h = UIScreen.main.bounds.height
@@ -58,11 +61,13 @@ extension WalkNaviViewController:AMapNaviWalkManagerDelegate{
     func walkManager(_ walkManager: AMapNaviWalkManager, playNaviSound soundString: String, soundStringType: AMapNaviSoundType) {
         if soundStringType == .surroundingTraffic{
             
+            
         }else{
             DispatchQueue.global().async {
                 let utterance = AVSpeechUtterance(string: soundString)
                 utterance.voice = AVSpeechSynthesisVoice.init(language: "zh-CN")
                 self.speech?.speak(utterance)
+                
             }
         }
     }
@@ -78,6 +83,10 @@ extension WalkNaviViewController:AMapNaviWalkViewDelegate{
 
             
         }
+    }
+    func walkViewCloseButtonClicked(_ walkView: AMapNaviWalkView) {
+        let loView = LocationViewController()
+        self.navigationController?.pushViewController(loView, animated: true)
     }
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BC0916DE1DF981FB00112A59 /* WalkNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0916DD1DF981FB00112A59 /* WalkNaviViewController.swift */; };
+		BC13532C1DFA80B700A88407 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13532B1DFA80B700A88407 /* LocationViewController.swift */; };
+		BC13532E1DFA830200A88407 /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC13532D1DFA830200A88407 /* AMapLocationKit.framework */; };
 		BC4CA3971DF90810005911D3 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CA3961DF90810005911D3 /* NavViewController.swift */; };
 		BC4F7EB41DF83296009062EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F7EB31DF83296009062EA /* AppDelegate.swift */; };
 		BC4F7EBB1DF83296009062EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4F7EBA1DF83296009062EA /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		BC0916DD1DF981FB00112A59 /* WalkNaviViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkNaviViewController.swift; sourceTree = "<group>"; };
+		BC13532B1DFA80B700A88407 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		BC13532D1DFA830200A88407 /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		BC4CA3961DF90810005911D3 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		BC4F7EB01DF83296009062EA /* XPMapForGaoDe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPMapForGaoDe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4F7EB31DF83296009062EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 				BC4F7ED81DF83390009062EA /* JavaScriptCore.framework in Frameworks */,
 				BC4F7ECE1DF832F5009062EA /* AMapNaviKit.framework in Frameworks */,
 				BC4F7ECD1DF832F5009062EA /* AMapFoundationKit.framework in Frameworks */,
+				BC13532E1DFA830200A88407 /* AMapLocationKit.framework in Frameworks */,
 				BC4F7ED01DF832F5009062EA /* MAMapKit.framework in Frameworks */,
 				BC4F7ECF1DF832F5009062EA /* AMapSearchKit.framework in Frameworks */,
 			);
@@ -115,6 +120,7 @@
 		BC4F7EC51DF832F5009062EA /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				BC13532D1DFA830200A88407 /* AMapLocationKit.framework */,
 				BC4F7EC61DF832F5009062EA /* AMapFoundationKit.framework */,
 				BC4F7EC71DF832F5009062EA /* AMapNaviKit.framework */,
 				BC4F7EC81DF832F5009062EA /* AMapSearchKit.framework */,
@@ -163,6 +169,7 @@
 				BC4F7EE91DF8351F009062EA /* MapViewController.xib */,
 				BC4CA3961DF90810005911D3 /* NavViewController.swift */,
 				BC0916DD1DF981FB00112A59 /* WalkNaviViewController.swift */,
+				BC13532B1DFA80B700A88407 /* LocationViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -244,6 +251,7 @@
 				BC4F7ED11DF832F5009062EA /* SpeechSynthesizer.m in Sources */,
 				BC4F7EEA1DF8351F009062EA /* MapViewController.swift in Sources */,
 				BC4CA3971DF90810005911D3 /* NavViewController.swift in Sources */,
+				BC13532C1DFA80B700A88407 /* LocationViewController.swift in Sources */,
 				BC4F7EB41DF83296009062EA /* AppDelegate.swift in Sources */,
 				BC0916DE1DF981FB00112A59 /* WalkNaviViewController.swift in Sources */,
 			);

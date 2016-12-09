@@ -136,6 +136,7 @@ extension MapViewController:AMapSearchDelegate{
             let annotation = MAPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(code.location.latitude), longitude: CLLocationDegrees(code.location.longitude))
             annotation.title = code.formattedAddress
+            print(code.location.latitude,code.location.longitude)
             if request.address == self.startField.text{
                 //设置大头针
                 if self.startAnnotation != nil{

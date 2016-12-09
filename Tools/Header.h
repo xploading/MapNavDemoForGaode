@@ -13,8 +13,10 @@
 #import <AMapSearchKit/AMapSearchAPI.h>
 #import <AMapNaviKit/AMapNaviKit.h>
 #import <AVKit/AVKit.h>
-#import <AVFoundation/AVSpeechSynthesis.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import "SpeechSynthesizer.h"
+#import <AMapLocationKit/AMapLocationKit.h>
+
 
 
 

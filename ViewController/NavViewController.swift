@@ -64,7 +64,7 @@ extension NavViewController:AMapNaviDriveManagerDelegate{
         if soundStringType == .passedReminder{
             DispatchQueue.global().async {
                 AudioServicesPlayAlertSound(1009)
-                print(111)
+                
             }
         }else{
             DispatchQueue.global().async {
