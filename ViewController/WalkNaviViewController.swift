@@ -72,7 +72,7 @@ extension WalkNaviViewController:AMapNaviWalkManagerDelegate{
 extension WalkNaviViewController:AMapNaviWalkViewDelegate{
     func walkViewMoreButtonClicked(_ walkView: AMapNaviWalkView) {
         DispatchQueue.global().async {
-            let utterance = AVSpeechUtterance(string: "go along this road")
+            let utterance = AVSpeechUtterance(string: "更多按钮被点击")
             utterance.voice = AVSpeechSynthesisVoice.init(language: "zh-CN")
             self.speech?.speak(utterance)
 
